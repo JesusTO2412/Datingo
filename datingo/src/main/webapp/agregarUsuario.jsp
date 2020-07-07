@@ -1,0 +1,138 @@
+<%-- 
+    Document   : agregarUsuario.jsp
+    Created on : 6 jul. 2020, 8:23:06
+    Author     : Jesus
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/iconos/logo2.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+    <link href="css/style.css" rel="stylesheet">
+    <title>Datingo</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top " style="background-color: #fd5754;">
+      <a class="navbar-brand" href="index.html">Datingo</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Settings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-sm-3 col-md-2 d-none d-sm-block sidebar fixed-left bg-dark">
+          <div class="col-12 col-sm-12 administrador text-center"">
+              <img src="img/admin.jpg" width="50%" class="img-fluid rounded-circle" alt=""><br><br>
+              <h4>Administrador</h4>
+          <div>Jesus Toxqui Ortega</div><br>
+          <a class="btn btn-danger" href="#" role="button">Log Out &raquo;</a>
+          </div><br>
+          <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="index.jsp">Dashboard <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="agregarUsuario.jsp">Insertar Usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="agregarEstado.jsp">Insertar Estado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="editarUsuario.jsp">Editar Usuario</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="editarEstado.jsp">Editar Estado</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Otra opcion</a>
+            </li>
+          </ul>
+        </nav>
+        <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+          <h1>Insertar Usuario</h1>
+          <section class="row justify-content-md-center imgLogoBg">
+            <div class="col-6 col-sm-6 text-center">
+              <img src="img/logo.png"  class="img-fluid ">      
+          </section>
+          <div class="card">
+            <div class="card-body">
+              <form action="#" method="post" enctype="multipart/form-data">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Nombre de Usuario</label>
+                    <input type="text" class="form-control" required="" name="nombreUsuario">
+                  </div>
+                   <div class="form-group col-md-6">
+                    <label>Correo electronico</label>
+                    <input type="email" class="form-control" name="correoElectronico">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>telefono</label>
+                    <input type="number" class="form-control" min="0" required="" maxlength="10" name="telefono">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Fecha de nacimiento</label>
+                    <input type="date" class="form-control" required="" name="fechaNacimiento">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Estado</label>
+                    <select id="inputAutor" name="autores" class="form-control">
+                      <option selected >Selecciona un Estado</option>
+                  <option value="AUT001">Alejandro Dumas</option><option value="AUT002">Ray Bradbury</option><option value="AUT003">Jane Austen</option><option value="AUT004">Carlos Cuauhtémoc Sanchez</option><option value="AUT005">Rainbow Rowell</option></select>
+                  </div>
+                </div>
+
+                <div class="form-row">  
+                  <div class="form-group col-md-12 ">
+                   <label>Foto perfil de usuario</label>
+                    <div class="custom-file">
+                      <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                      <input type="file" class="custom-file-input" id="customFileLang" lang="es" name="uploadfile">
+                  </div>  
+                  </div>
+                </div><br>
+                <button type="reset" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Limpiar datos</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-user-plus"></i> Insertar Usuario</button>
+                  
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/3bd2f12179.js" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,2 +1,7 @@
+Dao\EstadoDB.class
+Dao\UsuarioBD.class
 com\mycompany\datingo\JAXRSConfiguration.class
+Conf\Conexion.class
+Dao\Estado.class
+Dao\Usuario.class
 com\mycompany\datingo\resources\JavaEE8Resource.class
